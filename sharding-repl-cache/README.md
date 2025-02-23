@@ -1,23 +1,21 @@
 # pymongo-api
 
-Итоговая схема архитектуры лежит в корне проекта - [Схема архитектуры](./task.drawio)
-
 ## Как запустить
 
 Запускаем mongodb, redis и приложение
 
 ```shell
-docker compose -f ./sharding-repl-cache/compose.yaml up -d
+docker compose up -d
 ```
 
 Настраиваем шардирование, репликацию и кеширование
 ```shell
-./sharding-repl-cache/scripts/mongo-sharding-init.sh
+./scripts/mongo-sharding-init.sh
 ```
 
 Заполняем mongodb данными
 ```shell
-./sharding-repl-cache/scripts/mongo-init.sh
+./scripts/mongo-init.sh
 ```
 
 ## Как проверить
